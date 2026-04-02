@@ -4,23 +4,27 @@
     <title>Grid</title>
     <link rel="stylesheet" href="style.css">
     <style>
-          .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 100px 100px;
-            gap: 10px;
-        }
+          
 
         .first-item {
-            background-color: lightblue;
+            grid-area:header;
         }
 
         .second-item {
-            background-color: lightgreen;
+            grid-area:leftNav;
         }
 
         .third-item {
-            background-color: lightcoral;
+            grid-area:main;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            'leftNav header header'
+            'leftNav main main';
+            gap:10px;
+            
         }
     </style>
 </head>
